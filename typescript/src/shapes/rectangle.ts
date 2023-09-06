@@ -1,12 +1,7 @@
-class Rectangle implements Shape {
-    constructor (private width: number, private height: number) {}
-    computeArea () : number {
-        return this.width * this.height
-    }
+function Rectangle(width: number, height: number): Shape {
+    return {computeArea: function ()  {
+        return width * height
+    }}
 }
 
-function newRectangle(width: number, height: number): Shape {
-    return new Rectangle(width, height)
-}
-
-export { newRectangle }
+export { Rectangle }
